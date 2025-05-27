@@ -6,7 +6,7 @@ Este repositório foi criado com o objetivo de estudar e praticar o uso do **Rea
 
 O principal objetivo deste projeto é explorar as funcionalidades do React Hook Form, como:
 
-- Gerenciamento de estado de formulários de forma eficiente.
+- Gerenciamento de estado de formulários.
 - Uso do **useFormContext** e **FormProvider** para gerenciar via **Context API**
 - Integração com bibliotecas de validação, como o **Zod**.
 - Criação de formulários dinâmicos e reutilizáveis.
