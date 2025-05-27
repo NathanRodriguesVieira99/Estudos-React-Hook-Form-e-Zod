@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Estudos de React Hook Form e Zod
 
-## Getting Started
+Este repositório foi criado com o objetivo de estudar e praticar o uso do **React Hook Form** e do **Zod** para validação de formulários em React (NextJs).
 
-First, run the development server:
+## Objetivo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O principal objetivo deste projeto é explorar as funcionalidades do React Hook Form, como:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Gerenciamento de estado de formulários de forma eficiente.
+- Uso do **useFormContext** e **FormProvider** para gerenciar via **Context API**
+- Integração com bibliotecas de validação, como o **Zod**.
+- Criação de formulários dinâmicos e reutilizáveis.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Além disso, o **Zod** é utilizado para:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Definir esquemas de validação.
+- Garantir a validação de dados de entrada de forma robusta e tipada.
 
-## Learn More
+## Estrutura do Projeto
 
-To learn more about Next.js, take a look at the following resources:
+A estrutura do projeto foi organizada para facilitar o aprendizado e a experimentação. Os principais diretórios incluem:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **`src/app/components`**: Componentes reutilizáveis para os formulários.
+- **`src/app/schemas`**: Esquemas de validação criados com o Zod.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tecnologias Utilizadas
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **NextJs**
+- **Typescript**
+- **React Hook Form**
+- **Zod**
