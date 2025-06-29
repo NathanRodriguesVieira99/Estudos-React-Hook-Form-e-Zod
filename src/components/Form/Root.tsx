@@ -4,6 +4,6 @@ interface RootProps extends ComponentProps<"form"> {
   children: React.ReactNode;
 }
 
-export const Root = ({ children }: RootProps) => {
-  return <form>{children}</form>;
+export const Root = ({ children, ...props }: RootProps) => {
+  return <form {...props}>{children}</form>;
 };
