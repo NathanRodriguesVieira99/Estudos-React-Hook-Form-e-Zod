@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/Button";
-import { Form } from "@/components/Form";
+import { Button } from '@/components/Button';
+import { Form } from '@/components/Form';
 import {
   cadastroSchema,
   type cadastroSchemaProps,
-} from "@/schemas/cadastroSchema";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useTransition } from "react";
-import { FormProvider, useForm } from "react-hook-form";
+} from '@/schemas/cadastroSchema';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useTransition } from 'react';
+import { FormProvider, useForm } from 'react-hook-form';
 
 export default function Home() {
   const [isSaving, startIsSaving] = useTransition(); // useTransition usado para exibir loading enquanto o cadastro está sendo processado, sem travar a interface.
@@ -57,15 +57,20 @@ export default function Home() {
 
             <Form.Field className="mt-4">
               <Form.Label htmlFor="password">Senha</Form.Label>
-              <Form.Input
-                name="password"
-                type="password"
-                placeholder="Informe sua senha...."
-              />
+              {/* ShowPasswordToggle envolve o input de senha para controlar o estado de mostrar senha */}
+              <Form.ShowPasswordToggle>
+                {/* getInputType é uma função que que controla o tipo do input password <-> text */}
+                {({ getInputType }) => (
+                  <Form.Input
+                    name="password"
+                    type={getInputType('password')}
+                    placeholder="Informe sua senha...."
+                  />
+                )}
+              </Form.ShowPasswordToggle>
               <Form.ErrorMessage field="password" />
             </Form.Field>
 
-            {/* TODO refazer esse button com composition patter */}
             <Button.Root type="submit" disabled={isSaving}>
               {isSaving ? <p> Cadastrando...</p> : <p>Cadastrar</p>}
             </Button.Root>
