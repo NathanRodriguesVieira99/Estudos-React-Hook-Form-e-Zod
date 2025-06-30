@@ -33,7 +33,7 @@ export default function Home() {
       FormProvider para usar o contexto do react hook form e conectar aos componentes filhos com o useForm via spread (...)
       */}
       <FormProvider {...cadastroForm}>
-        <div className="flex  flex-col items-center mt-24">
+        <Form.Container>
           <Form.Root onSubmit={cadastroForm.handleSubmit(handleSubmitLogin)}>
             <Form.Field>
               <Form.Label htmlFor="name">Nome</Form.Label>
@@ -75,7 +75,7 @@ export default function Home() {
               {isSaving ? <p> Cadastrando...</p> : <p>Cadastrar</p>}
             </Button.Root>
           </Form.Root>
-        </div>
+        </Form.Container>
       </FormProvider>
     </>
   );
